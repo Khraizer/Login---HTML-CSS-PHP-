@@ -1,0 +1,146 @@
+:root{
+  --color-first: rgba(70, 70, 70);
+  --color-second: rgba(50, 50, 50);
+  --color-third: rgba(30, 30, 30);
+  --color-fourth: rgba(10, 10, 10);
+  --color-fifth: rgba(5, 5, 5);
+  --color-font: rgb(255, 255, 255);
+  --negative-object: invert(0%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*--------------------------------------------*/
+
+section.pattern-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--color-fifth),
+                                        var(--color-third),
+                                        var(--color-fifth)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------------------*/
+
+div.form-container {
+    border: 2px solid white;
+    /*background: linear-gradient(0deg, rgba(255, 255, 255,0.15) 0%,rgba(255, 255, 255,0.30) 100%);*/
+    max-width: 400px; 
+    width: 30%; 
+    height: 60%;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+
+/*--------------------------------------------*/
+
+div.form-container input {
+    background-color: transparent;
+    margin-left: 3%;
+    width: 60%;
+    height: 60%;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    max-width: 400px; 
+}
+
+@keyframes inputPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+div.form-container input:focus {
+    animation: inputPulse 0.5s ease;
+  }
+
+div.form-container input:hover{
+  background-color: rgb(27, 26, 26);
+}
+
+/*--------------------------------------------*/
+
+div.form-container div {
+    margin-top: 10%;
+}
+
+/*--------------------------------------------*/
+
+div.form-container button{
+    background-color: transparent;
+    color: black;
+    width: 60%;
+    border: 2px solid;
+}
+
+div.form-container button{
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  div.form-container button:hover {
+    background-color: hsl(234, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  div.form-container button:active {
+    background-color: hsl(234, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 100ms;
+  }
+
+
+/*--------------------------------------------*/
+
+div.tittle-container {
+    font-size: 1.5em;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/*--------------------------------------------*/
+
+@media (max-width: 768px) {
+    div.form-container {
+        width: 80%;
+        height: 60%; 
+    }
+}
+
+@media (max-width: 480px) {
+    div.form-container {
+        width: 85%;
+        height: 50%; 
+    }
+}
+
